@@ -5,11 +5,9 @@
     padding: 0;
 }
 
-#logo-a {
-    position: relative; 
-    width: 21px;
-    margin-top: 12px;
-    margin-left: 52px;
+.logo-a {
+    width: 20px;
+    margin: 16px;
 }
 
 /*Entrada------------------------------------------------------------------*/
