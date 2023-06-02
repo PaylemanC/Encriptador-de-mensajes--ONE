@@ -14,7 +14,7 @@ body {
 
 .logo-a {
     width: 20px;
-    margin: 16px;
+    margin: 16px 48px;
 }
 
 .sections-container {
@@ -180,22 +180,7 @@ footer {
 
 li {
     font-family: 'Inter', sans-serif;
-}
-
-.copyright {
-    display: flex; 
-    font-size: 16px;
     font-size: 15px;
-    align-items: center;
-}
-
-.copyright img {
-    height: 24px;
-    vertical-align: middle;
-}
-
-.copyright a {
-    font-style: normal;
 }
 
 .footer-right {
