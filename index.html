@@ -12,46 +12,49 @@
     <body>
         <main>
             <img src="imgs/logo-a.svg" class="logo-a">
-            <section class="entrada">
-                <!--Ingresar texto-->
-                <div class="texto-entrada"> 
-                    <textarea type="text" placeholder="Ingrese el texto aquí" class="texto-usuario"></textarea>
-                </div>
-                <!--Advertencia: ...-->
-                <div class="advertencia">
-                    <img src="imgs/!.svg" class="adventencia-img">
-                    <p class="advertencia-frase"> Solo letras minúsculas y sin acentos </p>
-                </div>
-                <!--Botones encriptar y desencriptar-->
-                <div class="botones-principales">
-                    <button class="btn-encriptar">Encriptar</button>
-                    <button class="btn-desencriptar">Desencriptar</button>
-                </div> 
-            </section>
-            <section class="salida">
-                <!--"Salida" por defecto, inicial-->
-                <div class="salida-inicial">
-                    <img src="imgs/Muñeco.png" class="muñeco"> 
-                    <h3>Ningún mensaje fue encontrado</h3>
-                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-                </div>
-                <!--Salida con texto des/encriptado. Este div JS lo esconde y luego invoca-->
-                <div class="texto-salida">
-                    <textarea type="text" class="texto-resultado"> </textarea>
-                    <!--Botón copiar-->
-                    <div class="boton-secundario">
-                        <button class="btn-copiar">Copiar</button>
+            <div class="sections-container">
+                <section class="entrada">
+                    <!--Ingresar texto-->
+                    <div class="texto-entrada"> 
+                        <textarea type="text" placeholder="Ingrese el texto aquí" class="texto-usuario"></textarea>
                     </div>
-                </div>
-            </section>
+                    <!--Advertencia: ...-->
+                    <div class="advertencia">
+                        <img src="imgs/!.svg" class="adventencia-img">
+                        <p class="advertencia-frase"> Solo letras minúsculas y sin acentos </p>
+                    </div>
+                    <!--Botones encriptar y desencriptar-->
+                    <div class="botones-principales">
+                        <button class="btn-encriptar">Encriptar</button>
+                        <button class="btn-desencriptar">Desencriptar</button>
+                    </div> 
+                </section>
+
+                <section class="salida">
+                    <!--"Salida" por defecto, inicial-->
+                    <div class="salida-inicial">
+                        <img src="imgs/Muñeco.png" class="muñeco"> 
+                        <h3>Ningún mensaje fue encontrado</h3>
+                        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                    </div>
+                    <!--Salida con texto des/encriptado. Este div JS lo esconde y luego invoca-->
+                    <div class="texto-salida">
+                        <textarea type="text" class="texto-resultado"> </textarea>
+                        <!--Botón copiar-->
+                        <div class="boton-secundario">
+                            <button class="btn-copiar">Copiar</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </main>
-        <footer>
+        <!-- <footer>
             <p class="copyright"> 
                 &copy; 2022 - Creadora: Carina Rocio Payleman, proyecto de Alura Latam, Programa ONE: Oracle Next Education
                 <img src="/imgs/logo-github.png" class="logo-github"> 
                 <a href="https://github.com/PaylemanC"> PaylemanC</a>
             </p>
-        </footer>
+        </footer> -->
 
 
 

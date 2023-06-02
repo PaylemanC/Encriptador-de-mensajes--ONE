@@ -10,22 +10,26 @@
     margin: 16px;
 }
 
-/*Entrada------------------------------------------------------------------*/
-.entrada {
-    position: absolute; 
-    margin: 50px 160px;
+.sections-container {
+    display: flex;
+    margin: 20px 60px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
 }
+/*Entrada------------------------------------------------------------------*/
+/* .entrada {
+    margin: 50px 160px;
+} */
 
 .texto-entrada {
-    width: 680px;
-    height: 370px;
-    /*Repetición de los valores de texto-usuario*/
+    /* height: 370px; */
 }
 
 /*textarea:*/
 .texto-usuario {
-    width: 680px;
-    height: 370px;
+    width: 100%;
+    /* height: 370px; */
     font-size: 24px;
     background-color: transparent; 
     border: none; 
@@ -80,17 +84,12 @@
 
 
 /*Salida------------------------------------------------------------------*/
-.salida {
-    position: absolute; 
-    top: 20px; 
-    right: 25px; 
-} 
 
 /*Estilo general de la salida*/
 .salida-inicial, .texto-resultado {
     background-color: #FFFFFF; 
     border-radius: 24px;
-    height: 510px;
+    height: calc(100% - 20px);
     width: 235px;    
     box-shadow: 0 5px 32px 8px #dadde8;
     border: none;
