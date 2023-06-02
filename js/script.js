@@ -8,7 +8,6 @@ const btnCopiar = document.querySelector (".btn-copiar")
 const textoFinal = document.querySelector (".texto-resultado");
 
 
-
 //`La letra "e" es convertida para "enter"`
 // `La letra "i" es convertida para "imes"`
 // `La letra "a" es convertida para "ai"`
@@ -18,12 +17,10 @@ const textoFinal = document.querySelector (".texto-resultado");
 
 
 //Encriptador.
-function encriptar(mensaje) { 
-    mensaje = textoUsuario.value; //Trae el texto del usuario.
-    mensaje = mensaje.toLowerCase();  //Convierte a minúsculas.
-    mensaje = mensaje.split('') //Convierte en array.
+function encriptar() { 
+    let mensaje = textoUsuario.value.toLowerCase().split('');  //Convierte el texto del usuario a minúsculas y luego lo parte en un array.
 
-    //For de conversión, con llaves:
+    //Conversión:
     for (let i = 0; i < mensaje.length; i++) { 
         mensaje[i] = mensaje[i].replace('e', 'enter');
         mensaje[i] = mensaje[i].replace('i', 'imes'); 
@@ -32,28 +29,27 @@ function encriptar(mensaje) {
         mensaje[i] = mensaje[i].replace ('u', 'ufat')
     } 
 
-    textoFinal.value = mensaje.join(''); //Trae el texto encriptado.
+    textoFinal.value = mensaje.join(''); //Trae el texto encriptado, volviéndolo string otra vez.
     resultado() //Abre el div con el resultado.
 }
 
 
 //Desencriptador. (solución alternativa).
-function desencriptar (mensaje) {
-    mensaje = textoUsuario.value; //Trae el texto del usuario.
-    mensaje = mensaje.toLowerCase(); //Convierte a minúsculas.
+function desencriptar () {
+    let mensaje = textoUsuario.value.toLowerCase();
 
     //Llaves de encriptación:
     const llaves = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]]; 
 
     //For de conversión:
-    for (var i = 0; i < llaves.length; i++) {
+    for (let i = 0; i < llaves.length; i++) {
         if (mensaje.includes (llaves[i][0])) {
             mensaje = mensaje.replaceAll(llaves[i][1], llaves[i][0]);
         }
     }
 
-    resultado() //Abre el div con el resultado.
     textoFinal.value = mensaje; //Trae el texto desencriptado.
+    resultado() //Abre el div con el resultado.
 }
 
 //Función para el botón copiar.
