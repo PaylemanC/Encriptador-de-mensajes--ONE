@@ -24,7 +24,7 @@ body {
     flex-wrap: wrap;
     gap: 32px;
 }
-/*Entrada------------------------------------------------------------------*/
+
 .entrada {
     width: 380px;
 }
@@ -90,20 +90,16 @@ body {
     border: 1px solid var(--main-color);
     background-color: #D8DFE8;
     width: 45%;
-
-    /* width: 220px; */
     height: 45px;
     border-radius: 16px;
     cursor: pointer;
 }
 
-
-
-
 /*Salida------------------------------------------------------------------*/
 .salida {
     min-height: 410px;
 }
+
 /*Estilo general de la salida*/
 .salida-inicial, .texto-resultado {
     background-color: #FFFFFF; 
@@ -171,9 +167,6 @@ body {
     cursor: pointer;
 }
 
-
-
-/*Mi info adicional al pie de página*/
 footer {
     background-color: #c7cee4;
     display: flex;
