@@ -22,6 +22,10 @@
     gap: 32px;
 }
 /*Entrada------------------------------------------------------------------*/
+.entrada {
+    width: 380px;
+}
+
 .texto-entrada {
     height: 300px;
 }
@@ -60,25 +64,27 @@
 }
 
 .botones-principales {
-    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .btn-encriptar {
     color: #FFFFFF; 
     background-color: var(--main-color);
-    width: 220px;
+    width: 50%;
     height: 45px;
     border: none; 
     border-radius: 16px;
     cursor: pointer;
-    margin-right: 12px;
 }
 
 .btn-desencriptar {
     color: var(--main-color); 
     border: 1px solid var(--main-color);
     background-color: #D8DFE8;
-    width: 220px;
+    width: 45%;
+
+    /* width: 220px; */
     height: 45px;
     border-radius: 16px;
     cursor: pointer;
@@ -118,6 +124,7 @@
     background: #FFFFFF;
     color: #343A40;
     font-size: 20px;
+    margin: 8px 0;
 }
 
 .salida-inicial p {
@@ -125,6 +132,7 @@
     color: #495057;
     font-size: 14px;
     font-weight: normal;
+    line-height: 21px;
 }
 
 /*textarea: salida del texto des/encriptado*/
