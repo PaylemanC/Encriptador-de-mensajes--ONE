@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+:root {
+    --main-color: #0A3871;
+}
+
 .logo-a {
     width: 20px;
     margin: 16px;
@@ -29,14 +33,14 @@
     font-size: 24px;
     background-color: transparent; 
     border: none; 
-    color: #0A3871;
+    color: var(--main-color);
     padding: 16px;
 }
 .texto-usuario:focus-visible {
     outline: none;
 }
 ::placeholder {
-    color: #0A3871; 
+    color: var(--main-color); 
 }
 
 .advertencia {
@@ -61,7 +65,7 @@
 
 .btn-encriptar {
     color: #FFFFFF; 
-    background-color: #0A3871;
+    background-color: var(--main-color);
     width: 220px;
     height: 45px;
     border: none; 
@@ -71,8 +75,8 @@
 }
 
 .btn-desencriptar {
-    color: #0A3871; 
-    border: 1px solid #0A3871;
+    color: var(--main-color); 
+    border: 1px solid var(--main-color);
     background-color: #D8DFE8;
     width: 220px;
     height: 45px;
@@ -137,8 +141,8 @@
     position: absolute; 
     bottom: 20px;
     right: 23px;
-    color: #0A3871; 
-    border: 1px solid #0A3871;
+    color: var(--main-color); 
+    border: 1px solid var(--main-color);
     background-color: #FFFFFF;
     width: 220px;
     height: 45px;
