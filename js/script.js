@@ -1,9 +1,9 @@
 //Obtener elementos principales provenientes del HTML: entrada, botones, y salida.
 const textoUsuario = document.querySelector (".texto-usuario");
 
-var btnEncriptar = document.querySelector (".btn-encriptar");
-var btnDesencriptar = document.querySelector (".btn-desencriptar");
-var btnCopiar = document.querySelector (".btn-copiar")
+const btnEncriptar = document.querySelector (".btn-encriptar");
+const btnDesencriptar = document.querySelector (".btn-desencriptar");
+const btnCopiar = document.querySelector (".btn-copiar")
 
 const textoFinal = document.querySelector (".texto-resultado");
 
@@ -19,13 +19,12 @@ const textoFinal = document.querySelector (".texto-resultado");
 
 //Encriptador.
 function encriptar(mensaje) { 
-    var mensaje = textoUsuario.value; //Trae el texto del usuario.
-    var mensaje = mensaje.toLowerCase();  //Convierte a minúsculas.
-
-    var mensaje = mensaje.split('') //Convierte en array.
+    mensaje = textoUsuario.value; //Trae el texto del usuario.
+    mensaje = mensaje.toLowerCase();  //Convierte a minúsculas.
+    mensaje = mensaje.split('') //Convierte en array.
 
     //For de conversión, con llaves:
-    for (var i = 0; i < mensaje.length; i++) { 
+    for (let i = 0; i < mensaje.length; i++) { 
         mensaje[i] = mensaje[i].replace('e', 'enter');
         mensaje[i] = mensaje[i].replace('i', 'imes'); 
         mensaje[i] = mensaje[i].replace('a', 'ai');
@@ -35,28 +34,26 @@ function encriptar(mensaje) {
 
     textoFinal.value = mensaje.join(''); //Trae el texto encriptado.
     resultado() //Abre el div con el resultado.
-
 }
 
 
 //Desencriptador. (solución alternativa).
 function desencriptar (mensaje) {
-    var mensaje = textoUsuario.value; //Trae el texto del usuario.
-    var mensaje = mensaje.toLowerCase(); //Convierte a minúsculas.
+    mensaje = textoUsuario.value; //Trae el texto del usuario.
+    mensaje = mensaje.toLowerCase(); //Convierte a minúsculas.
 
     //Llaves de encriptación:
-    var llaves = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]]; 
+    const llaves = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]]; 
 
     //For de conversión:
     for (var i = 0; i < llaves.length; i++) {
         if (mensaje.includes (llaves[i][0])) {
-            mensaje = mensaje.replaceAll (llaves[i][1], llaves[i][0]);
+            mensaje = mensaje.replaceAll(llaves[i][1], llaves[i][0]);
         }
     }
 
     resultado() //Abre el div con el resultado.
     textoFinal.value = mensaje; //Trae el texto desencriptado.
-
 }
 
 //Función para el botón copiar.
