@@ -68,6 +68,10 @@
     justify-content: space-between;
 }
 
+.btn-encriptar, .btn-desencriptar {
+    min-width: 106px;
+}
+
 .btn-encriptar {
     color: #FFFFFF; 
     background-color: var(--main-color);
@@ -94,7 +98,9 @@
 
 
 /*Salida------------------------------------------------------------------*/
-
+.salida {
+    min-height: 410px;
+}
 /*Estilo general de la salida*/
 .salida-inicial, .texto-resultado {
     background-color: #FFFFFF; 
@@ -136,6 +142,10 @@
 }
 
 /*textarea: salida del texto des/encriptado*/
+.texto-salida {
+    height: calc(100% - 20px);
+}
+
 .texto-salida .texto-resultado {
     font-size: 19px;
     color: #495057;
